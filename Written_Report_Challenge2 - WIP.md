@@ -37,10 +37,12 @@ The analysis of the database included a significant number of projects in the th
 - When you launch a campaign too early in the year it is possible that investors may be inclined to hold off to see what other opportunities may present themselves
 - If you wait too late to launch, then you are likely to find that many investors have already committed their funds to another project  
 
-![This is a graph from my Kickstarter_Challenge.xlsx spreadsheet](Resources/Theater_Outcomes_vs_Launch.png "Figure 2.1.1 - Theater Outcomes vs Launch Date - Counts by Subcategory")
-**Figure 2.1.1 - Theater Outcomes vs Launch Date - Counts by Subcategory**
-![This is a graph from my Kickstarter_Challenge.xlsx spreadsheet](Resources/Outcomes_Sucess_Fail_by_Month.png "Figure 2.1.2 - Theater Outcomes vs Launch Date - Success/Fail Ratio")
-**Figure 2.1.2 - Theater Outcomes vs Launch Date - Success/Fail Ratio**
+![This is a MsgBox from the AllStocksAnalysis VBScript Module my VBA_Challenge.xlsm spreadsheet](Resources/VBA_Challenge_2017_before.png "Figure 2.1.1 - 2017 Stock Analysis Performance Before Refactoring VBScript")
+**Figure 2.1.1 - 2017 Stock Analysis Performance Before Refactoring VBScript**
+![This is a MsgBox from the AllStocksAnalysis VBScript Module my VBA_Challenge.xlsm spreadsheet](Resources/VBA_Challenge_2017.png "Figure 2.1.2 - 2017 Stock Analysis Performance After Refactoring VBScript")
+**Figure 2.1.2 - 2017 Stock Analysis Performance After Refactoring VBScript**
+![This is a MsgBox from the AllStocksAnalysis VBScript Module my VBA_Challenge.xlsm spreadsheet](Resources/VBA_Challenge_2017-Even_Faster.png "Figure 2.1.3 - 2017 Stock Analysis Performance After Refactoring VBScript")
+**Figure 2.1.3 - 2017 Stock Analysis Performance After Refactoring to an Even Faster VBScript**
 ### 2.2 Analysis of Outcomes Based on Goals
 
 The analysis of the database shows that Louise's campaign, at less than $3,000 was set at a very reasonable goal level.  The only goal level that performed better was at less than a $1,000.  However, if you consider that most ranges were $4,999 you could in fact say that Louise was in the highest success range.  You could also say that while the less than $1,000 range was the most successful at raising money, it was also somewhat of an outlier in that it was likely too small a goal to achieve anything of importance.  I would argue that Louise was well positioned in terms of goals to be successful.  There are very few campaigns with goals that exceed $25,000 and in fact it is unlikely that the results above this range are of any statistical significance based on the small sample size.  The conclusions that could be drawn are:
