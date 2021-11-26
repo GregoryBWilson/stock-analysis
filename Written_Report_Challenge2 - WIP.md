@@ -12,9 +12,56 @@ The purpose of the specific project within this module was to assist a client, S
 
 ### 1.2 Approach and Challenges
  
-The analysis followed the general process of breaking the available data into categories and subcategories that were appropriate to Louise's needs.  She was interested in theatre and in particular plays.  I looked at two specific factors that may influence the goal outcome, those being launch date and the actual goal amount.  This data is presented in a line chart to show trending.  I also did an analysis by country and extracted three indicative candidates to discuss with Louise.  The country data is presented in two small tables, table x.1 and x.2.
+The analysis followed the general process looping through the rows of the stock transactions to find the first tranaction in a given year, for a given ticker and recording the years opening price.  The same process was followed to find the last transaction for the year's closing price. This was done for Steve earlier for only ticker DQ.  The DQAnalysis VBScript in the spreadsheet has been modified to provide Steve with a consolidated summary of DQ's rate of return.  Below is the code that allows us to analyze one sheet after another.  This was included in the workbook as a small demonstration for Steve of what could be done if he were to further engage my services.
+
+    Dim DataYear(1) As String
+    
+    DataYear(0) = "2017"
+    DataYear(1) = "2018"
+    
+    'Run analysis for every year of data
+    For K = 0 To 1
+                    
+        Worksheets(DataYear(K)).Activate
   
-I created a number of views to verify the analysis was correct and meaningful.  I did observe that there was an issue in the project defined requirements in that the Outcomes based on Goals last row said Greater than 50000 and the second last row said 45000 to 49999.  This did not affect the values because there were no goals of exactly 50000 for theatres - it would cause issues for other campaigns.  To correct this, I changed the goal to be Greater than 49999.  Another issue was that I wanted to give Louise better data about what she could do in the future, so I created a couple of pivot tables that allowed me to extract data that I specifically wanted to discuss with her.  The last item was that the first row was a much smaller range than most others.  The second row had a slightly smaller and the last row was of course much larger.  Using a line graph chart could be somewhat deceiving, however, the trend in meaningful zones was however valid and I have addressed this in the explanation.
+Steve wanted to see all the tickers in each year so another VBScript was created AllStocksAnalysis.  This version of the VBScript was somewhat inefficent and clearly anoying because it refreshs the All Stocks Analysis worksheet as in loops though every ticker causing the screen to flicker like a strobe light.  You can see this in the code below, where j is the index for rows and i is the ticker index.
+
+       Next j
+       '6) Output data for current ticker
+       Worksheets("All Stocks Analysis").Activate
+       Cells(4 + i, 1).Value = ticker
+       Cells(4 + i, 2).Value = totalVolume
+       Cells(4 + i, 3).Value = endingPrice / startingPrice - 1
+
+   Next i
+
+The refactor code, in VBScript AllStocksAnalysisRefactored, resolves this inefficency by moving the writing of these values to outside of the main row by row stock analysis loop as follows.
+
+    For i = 0 To 11
+        
+        Worksheets("All Stocks Analysis").Activate
+        Cells(i + 4, 1) = tickers(i)
+        Cells(i + 4, 2) = tickerVolumes(i)
+        Cells(i + 4, 3) = tickerEndingPrices(i) / tickerStartingPrices(i) - 1
+        
+    Next i  
+
+    In researching the possible causes of slow macro enabled workbooks I came across a fabulous resource that I added to another VBScript called EvenFaster.  I noticed that this Original code was constantly writing to the sheet so I found this code at https://www.dummies.com/software/microsoft-office/excel/10-ways-to-speed-up-your-macros/
+
+
+    It staes that Automatic Calculations and Screen Updating can be turn off to reduce into interaction with the spreadsheet until they are needed.  Here is the code:
+
+    Application.Calculation = xlCalculationManual
+    Application.ScreenUpdating = False
+
+    At the end of the subroutine you need to turn them on to complete the spreadsheet work.  Here is the code for that:
+
+    Application.Calculation = xlCalculationAutomatic
+    Application.ScreenUpdating = True
+
+    It makes an amzing difference, both in time and visual program performance.
+    
+
 
 ## 2 Analysis and Observations
 <!-- Results: Using images and examples of your code, compare the stock performance between 2017 and 2018, as well as the execution times of the original script and the refactored script. -->
@@ -71,13 +118,40 @@ Not wanting to leave Louis without a more significant plan to improve her chance
 - In Great Britain the success rate is an impressive 77% overall with successes 3.4 times more likely than failures
 - If Louise feels the logistics of a launch in Great Britain are too difficult, she might consider Canada as an option due to the favourable investment environment and the relative proximity to the US
 
-**Table 2.3.1 - Theater Outcomes vs Goals Success Rate by Country**  
-![This is a graph from my Kickstarter_Challenge.xlsx spreadsheet](Resources/Success_Rate.png " Table 2.3.1 - Theater Outcomes vs Goals Success Rate by Country")
-
-**Table 2.3.2 - Theater Outcomes vs Goals - Success/Fail Ratio by Country**  
-![This is a graph from my Kickstarter_Challenge.xlsx spreadsheet](Resources/Success_Fail_Ratio.png "Table 2.3.2 - Theater Outcomes vs Goals - Success/Fail Ratio by Country")
 
 ## 3 Challenges and Difficulties Encountered
+
+I didn't like the the stock data had to be sort before in could be analyze, so for my own intereted I created this script the gives the same rsesults no matter how messed up the rows are.  I is pretty efficent too.  I didn't include this in the project, becuase I think we can up sell Steve on some more work for large data sets.
+
+        'I SET THIS LOOP UP SO THAT YOU DON'T CARE WHAT ORDER THE DATA IS IN IT WILL STILL WORK
+        For i = rowStart To rowEnd
+                    
+                rowYear = Left(Cells(i, 2), 4)
+                rowMonth = Mid(Cells(i, 2), 6, 2)
+                rowDay = Right(Cells(i, 2), 2)
+                
+                tradedate = DateSerial(rowYear, rowMonth, rowDay)
+                
+                If Cells(i, 1) = "DQ" Then
+                
+                    totalVolume = totalVolume + Cells(i, 8)
+                    totalTrades = totalTrades + 1
+                    
+                    If tradedate <= startingDate Then
+                
+                        startingDate = tradedate
+                        startingPrice = Cells(i, 6)
+                    
+                    Else
+                        endingDate = tradedate
+                        endingPrice = Cells(i, 6)
+                    
+                End If
+                End If
+    
+    
+        Next i
+
 <!-- Summary: In a summary statement, address the following questions.
 What are the advantages or disadvantages of refactoring code?
 How do these pros and cons apply to refactoring the original VBA script? --> 
