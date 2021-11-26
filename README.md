@@ -14,6 +14,6 @@ I have created a resource folder to hold the image files that we be in the Chall
 
 - The final report is in the Markdown file Written_Report_Challenge2.md
 
-- The repository contains a resource folder with the six figures that are referenced in the report
+- The repository contains a resource folder with the six figures and two tables that are referenced in the report
 
 - A zip folder of the complete repository can also be found here
