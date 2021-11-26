@@ -19,17 +19,16 @@ I created a number of views to verify the analysis was correct and meaningful.  
 ## 2 Analysis and Observations
 <!-- Results: Using images and examples of your code, compare the stock performance between 2017 and 2018, as well as the execution times of the original script and the refactored script. -->
 
-![This is a sheenshot form stock the 2017 performance from VBA_Challenge.xlsm spreadsheet](Resources/StockAnalysis2017.png "Table 2.1 - 2017 Stock Analysis")  
-**Table 2.1 - 2017 Stock Analysis"**
-
-![This is a sheenshot form stock the 2018 performance from VBA_Challenge.xlsm spreadsheet](Resources/StockAnalysis2018.png "Table 2.2 - 2018 Stock Analysis")  
-**Table 2.2 - 2018 Stock Analysis"**
-
-### 2.1 Analysis of Outcomes Based on Launch Date
+### 2.1 Analysis of 2017 Stocks
   
 The analysis of the database included a significant number of projects in the theatre category and most of those were from the subcategory plays.  The campaign for the play Fever that was launched in June may have been slightly late.  In the graphs x.x and x.y below you can see that May appears to be the best time of year to have a successful campaign.  This is particularly true when you analyse the success and failure ratio - the decline from May to the end of the year is significant.  You will also notice that while the success rises from January to May it is not as steep of a rise and then you find that in May and June the largest numbers of campaigns are launched.  I would conclude the following:
 - When you launch a campaign too early in the year it is possible that investors may be inclined to hold off to see what other opportunities may present themselves
 - If you wait too late to launch, then you are likely to find that many investors have already committed their funds to another project  
+
+![This is a sheenshot form stock the 2017 performance from VBA_Challenge.xlsm spreadsheet](Resources/StockAnalysis2017.png "Table 2.1 - 2017 Stock Analysis")  
+**Table 2.1 - 2017 Stock Analysis"**
+
+#### VBScript Perfomance on 2017 Ticker Data
 
 ![This is a MsgBox from the AllStocksAnalysis VBScript Module my VBA_Challenge.xlsm spreadsheet](Resources/VBA_Challenge_2017_before.png "Figure 2.1.1 - 2017 Stock Analysis VBScript Performance Before Refactoring")  
 **Figure 2.1.1 - 2017 Stock Analysis VBScript Performance Before Refactoring**
@@ -40,11 +39,16 @@ The analysis of the database included a significant number of projects in the th
 ![This is a MsgBox from the AllStocksEvenFaster VBScript Module my VBA_Challenge.xlsm spreadsheet](Resources/VBA_Challenge_2017-Even_Faster.png "Figure 2.1.3 - 2017 Stock Analysis VBScript Performance After Refactoring")  
 **Figure 2.1.3 - 2017 Stock Analysis VBScript Performance After Refactoring to an Even Faster**
 
-### 2.2 Analysis of Outcomes Based on Goals
+### 2.2 Analysis of 2018 Stocks
 
 The analysis of the database shows that Louise's campaign, at less than $3,000 was set at a very reasonable goal level.  The only goal level that performed better was at less than a $1,000.  However, if you consider that most ranges were $4,999 you could in fact say that Louise was in the highest success range.  You could also say that while the less than $1,000 range was the most successful at raising money, it was also somewhat of an outlier in that it was likely too small a goal to achieve anything of importance.  I would argue that Louise was well positioned in terms of goals to be successful.  There are very few campaigns with goals that exceed $25,000 and in fact it is unlikely that the results above this range are of any statistical significance based on the small sample size.  The conclusions that could be drawn are:
 - There is a clear trend that demonstrates that the larger the goal the less likely it is to get sufficient pledges
 - The other interesting observation is that there seems to be a significant financial threshold at the $5,000 goal level where investor's interest tends to wain
+
+![This is a sheenshot form stock the 2018 performance from VBA_Challenge.xlsm spreadsheet](Resources/StockAnalysis2018.png "Table 2.2 - 2018 Stock Analysis")  
+**Table 2.2 - 2018 Stock Analysis"**
+
+#### VBScript Perfomance on 2018 Ticker Data
 
 ![This is a MsgBox from the AllStocksAnalysis VBScript Module my VBA_Challenge.xlsm spreadsheet](Resources/VBA_Challenge_2018_before.png "Figure 3.1.1 - 2018 Stock Analysis VBScript Performance Before Refactoring")  
 **Figure 3.1.1 - 2018 Stock Analysis VBScript Performance Before Refactoring**
@@ -72,7 +76,6 @@ Not wanting to leave Louis without a more significant plan to improve her chance
 
 **Table 2.3.2 - Theater Outcomes vs Goals - Success/Fail Ratio by Country**  
 ![This is a graph from my Kickstarter_Challenge.xlsx spreadsheet](Resources/Success_Fail_Ratio.png "Table 2.3.2 - Theater Outcomes vs Goals - Success/Fail Ratio by Country")
-
 
 ## 3 Challenges and Difficulties Encountered
 <!-- Summary: In a summary statement, address the following questions.
