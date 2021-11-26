@@ -1,27 +1,15 @@
 # Analysis of Stock Performance by Ticker
-<!-- There is a title, and there are multiple paragraphs (2 pt).
-Each paragraph has a heading (2 pt).
-There are subheadings to break up text (2 pt).
-Links are working, and images are formatted and displayed where appropriate (2 pt). -->
-
-<!-- There is a title, and there are multiple paragraphs (2 pt).
-Each paragraph has a heading (2 pt).
-There are subheadings to break up text (2 pt).
-Links are working, and images are formatted and displayed where appropriate (2 pt). -->
 
 ## 1 Overview of Project
 
 This project was the second challenge in the Carleton University Business Analytics and Data Visualization Boot Camp.  Module 2 of the first Unit of the boot camp was intended to through th euse of VBA, learn the fundamental building blocks of programming languages. These skills included creating VBA macros, triggering pop-ups and inputs, reading and changing cell values, and format cells.  The project help us develop our skills in using nested loops and conditionals to direct logic flow.  Writing pseudo code was a very helpful skill to develop as the VBA scripts were detailed to complete the project objectives.
 
-&&&&&&&
-
 ### 1.1 Purpose
 
 <!-- Overview of Project: Explain the purpose of this analysis. -->
+ 
+The purpose of the specific project within this module was to assist a client, Steve.  He has been looking into and investment his parents made in an green engergy stock, DAQO New Engergy Corp(DQ).  After looking at DQ, Steve asked us to extend the alaysis to a list of green engergy stocks.  Concerned about how slow the program will run if he tries to analyze a larger number of stock.  We were provided with pseudo code for a posisble refactoring of the original code and saked to analysis its perfromance.  Always wanting to strive for perfection, we will also research further code improvments.
 
-
-  
-The purpose of the specific project within this module was to assist a client, Louise who came close to, but failed to meet her goals in funding a play named Fever.  It is not clear why Louise wants this information, but I am assuming that she probably wants to make another more focused attempt to fund this play.  As we strive for perfection, we will definitely be giving Louise the best information available.
 ### 1.2 Approach and Challenges
  
 The analysis followed the general process of breaking the available data into categories and subcategories that were appropriate to Louise's needs.  She was interested in theatre and in particular plays.  I looked at two specific factors that may influence the goal outcome, those being launch date and the actual goal amount.  This data is presented in a line chart to show trending.  I also did an analysis by country and extracted three indicative candidates to discuss with Louise.  The country data is presented in two small tables, table x.1 and x.2.
@@ -31,20 +19,26 @@ I created a number of views to verify the analysis was correct and meaningful.  
 ## 2 Analysis and Observations
 <!-- Results: Using images and examples of your code, compare the stock performance between 2017 and 2018, as well as the execution times of the original script and the refactored script. -->
 
+![This is a sheenshot form stock the 2017 performance from VBA_Challenge.xlsm spreadsheet](Resources/StockAnalysis2017.png "Table 2.1 - 2017 Stock Analysis")  
+**Table 2.1 - 2017 Stock Analysis"**
+
+![This is a sheenshot form stock the 2018 performance from VBA_Challenge.xlsm spreadsheet](Resources/StockAnalysis2018.png "Table 2.2 - 2018 Stock Analysis")  
+**Table 2.2 - 2018 Stock Analysis"**
+
 ### 2.1 Analysis of Outcomes Based on Launch Date
   
 The analysis of the database included a significant number of projects in the theatre category and most of those were from the subcategory plays.  The campaign for the play Fever that was launched in June may have been slightly late.  In the graphs x.x and x.y below you can see that May appears to be the best time of year to have a successful campaign.  This is particularly true when you analyse the success and failure ratio - the decline from May to the end of the year is significant.  You will also notice that while the success rises from January to May it is not as steep of a rise and then you find that in May and June the largest numbers of campaigns are launched.  I would conclude the following:
 - When you launch a campaign too early in the year it is possible that investors may be inclined to hold off to see what other opportunities may present themselves
 - If you wait too late to launch, then you are likely to find that many investors have already committed their funds to another project  
 
-![This is a MsgBox from the AllStocksAnalysis VBScript Module my VBA_Challenge.xlsm spreadsheet](Resources/VBA_Challenge_2017_before.png "Figure 2.1.1 - 2017 Stock Analysis Performance Before Refactoring VBScript")  
-**Figure 2.1.1 - 2017 Stock Analysis Performance Before Refactoring VBScript**
+![This is a MsgBox from the AllStocksAnalysis VBScript Module my VBA_Challenge.xlsm spreadsheet](Resources/VBA_Challenge_2017_before.png "Figure 2.1.1 - 2017 Stock Analysis VBScript Performance Before Refactoring")  
+**Figure 2.1.1 - 2017 Stock Analysis VBScript Performance Before Refactoring**
 
-![This is a MsgBox from the AllStocksAnalysisRefactored VBScript Module my VBA_Challenge.xlsm spreadsheet](Resources/VBA_Challenge_2017.png "Figure 2.1.2 - 2017 Stock Analysis Performance After Refactoring VBScript")  
-**Figure 2.1.2 - 2017 Stock Analysis Performance After Refactoring VBScript**
+![This is a MsgBox from the AllStocksAnalysisRefactored VBScript Module my VBA_Challenge.xlsm spreadsheet](Resources/VBA_Challenge_2017.png "Figure 2.1.2 - 2017 Stock Analysis VBScript Performance After Refactoring")  
+**Figure 2.1.2 - 2017 Stock Analysis VBScript Performance After Refactoring**
 
-![This is a MsgBox from the AllStocksEvenFaster VBScript Module my VBA_Challenge.xlsm spreadsheet](Resources/VBA_Challenge_2017-Even_Faster.png "Figure 2.1.3 - 2017 Stock Analysis Performance After Refactoring VBScript")  
-**Figure 2.1.3 - 2017 Stock Analysis Performance After Refactoring to an Even Faster VBScript**
+![This is a MsgBox from the AllStocksEvenFaster VBScript Module my VBA_Challenge.xlsm spreadsheet](Resources/VBA_Challenge_2017-Even_Faster.png "Figure 2.1.3 - 2017 Stock Analysis VBScript Performance After Refactoring")  
+**Figure 2.1.3 - 2017 Stock Analysis VBScript Performance After Refactoring to an Even Faster**
 
 ### 2.2 Analysis of Outcomes Based on Goals
 
@@ -52,14 +46,14 @@ The analysis of the database shows that Louise's campaign, at less than $3,000 w
 - There is a clear trend that demonstrates that the larger the goal the less likely it is to get sufficient pledges
 - The other interesting observation is that there seems to be a significant financial threshold at the $5,000 goal level where investor's interest tends to wain
 
-![This is a MsgBox from the AllStocksAnalysis VBScript Module my VBA_Challenge.xlsm spreadsheet](Resources/VBA_Challenge_2018_before.png "Figure 3.1.1 - 2018 Stock Analysis Performance Before Refactoring VBScript")  
-**Figure 3.1.1 - 2018 Stock Analysis Performance Before Refactoring VBScript**
+![This is a MsgBox from the AllStocksAnalysis VBScript Module my VBA_Challenge.xlsm spreadsheet](Resources/VBA_Challenge_2018_before.png "Figure 3.1.1 - 2018 Stock Analysis VBScript Performance Before Refactoring")  
+**Figure 3.1.1 - 2018 Stock Analysis VBScript Performance Before Refactoring**
 
-![This is a MsgBox from the AllStocksAnalysisRefactored VBScript Module my VBA_Challenge.xlsm spreadsheet](Resources/VBA_Challenge_2018.png "Figure 3.1.2 - 2018 Stock Analysis Performance After Refactoring VBScript")  
-**Figure 3.1.2 - 2018 Stock Analysis Performance After Refactoring VBScript**
+![This is a MsgBox from the AllStocksAnalysisRefactored VBScript Module my VBA_Challenge.xlsm spreadsheet](Resources/VBA_Challenge_2018.png "Figure 3.1.2 - 2018 Stock Analysis VBScript Performance After Refactoring")  
+**Figure 3.1.2 - 2018 Stock Analysis VBScript Performance After Refactoring**
 
-![This is a MsgBox from the AllStocksEvenFaster VBScript Module my VBA_Challenge.xlsm spreadsheet](Resources/VBA_Challenge_2018-Even_Faster.png "Figure 3.1.3 - 2018 Stock Analysis Performance After Refactoring VBScript")  
-**Figure 3.1.3 - 2018 Stock Analysis Performance After Refactoring to an Even Faster VBScript**
+![This is a MsgBox from the AllStocksEvenFaster VBScript Module my VBA_Challenge.xlsm spreadsheet](Resources/VBA_Challenge_2018-Even_Faster.png "Figure 3.1.3 - 2018 Stock Analysis VBScript Performance After Refactoring")  
+**Figure 3.1.3 - 2018 Stock Analysis VBScript Performance After Refactoring to an Even Faster**
 
 **What do we know?**  
 This is what we have determine based on the work that Louise has contracted us to do.
