@@ -46,10 +46,14 @@ The refactor code, in VBScript AllStocksAnalysisRefactored, resolves this ineffi
         
     Next i  
 
-    In researching the possible causes of slow macro enabled workbooks I came across a fabulous resource that I added to another VBScript called EvenFaster.  I noticed that this Original code was constantly writing to the sheet so I found this code at https://www.dummies.com/software/microsoft-office/excel/10-ways-to-speed-up-your-macros/
+   In researching the possible causes of slow macro enabled workbooks I came across a fabulous resource that I added to another VBScript called EvenFaster.
+   
+   I noticed that this Original code was constantly writing to the sheet so I found this code at:  
+   https://www.dummies.com/software/microsoft-office/excel/10-ways-to-speed-up-your-macros/
 
 
-    It staes that Automatic Calculations and Screen Updating can be turn off to reduce into interaction with the spreadsheet until they are needed.  Here is the code:
+  It states that Automatic Calculations and Screen Updating can be turn off to reduce into interaction with the spreadsheet until they are needed.  
+  Here is the code:
 
     Application.Calculation = xlCalculationManual
     Application.ScreenUpdating = False
@@ -61,8 +65,6 @@ The refactor code, in VBScript AllStocksAnalysisRefactored, resolves this ineffi
 
     It makes an amzing difference, both in time and visual program performance.
     
-
-
 ## 2 Analysis and Observations
 <!-- Results: Using images and examples of your code, compare the stock performance between 2017 and 2018, as well as the execution times of the original script and the refactored script. -->
 
