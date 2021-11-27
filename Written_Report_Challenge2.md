@@ -6,12 +6,10 @@ This project was the second challenge in the Carleton University Business Analyt
 
 ### 1.1 Purpose
 
-<!-- Overview of Project: Explain the purpose of this analysis. -->
- 
-The purpose of the specific project within this module was to assist a client, Steve.  He has been looking into and investment his parents made in an green engergy stock, DAQO New Engergy Corp(DQ).  After looking at DQ, Steve asked us to extend the alaysis to a list of green engergy stocks.  Concerned about how slow the program will run if he tries to analyze a larger number of stock.  We were provided with pseudo code for a posisble refactoring of the original code and saked to analysis its perfromance.  Always wanting to strive for perfection, we will also research further code improvments.
+The purpose of the specific project within this module was to assist a client, Steve.  He has been looking into and investment his parents made in an green energy stock, DAQO New Energy Corp(DQ).  After looking at DQ, Steve asked us to extend the analysis to a list of green energy stocks.  Concerned about how slow the program will run if he tries to analyze a larger number of stock.  We were provided with pseudo code for a possible refactoring of the original code and asked to analysis its performance.  Always wanting to strive for perfection, we will also research further code improvements.
 
 ### 1.2 Approach and Challenges
- 
+
 The analysis followed the general process looping through the rows of the stock transactions to find the first tranaction in a given year, for a given ticker and recording the years opening price.  The same process was followed to find the last transaction for the year's closing price. This was done for Steve earlier for only ticker DQ.  The DQAnalysis VBScript in the spreadsheet has been modified to provide Steve with a consolidated summary of DQ's rate of return.  Below is the code that allows us to analyze one sheet after another.  This was included in the workbook as a small demonstration for Steve of what could be done if he were to further engage my services.
 
     Dim DataYear(1) As String
@@ -23,7 +21,7 @@ The analysis followed the general process looping through the rows of the stock 
     For K = 0 To 1
                     
         Worksheets(DataYear(K)).Activate
-  
+
 The results for steve were as follows:
 
 | DAQO (Ticker: DQ) |                    |              |
@@ -33,7 +31,7 @@ The results for steve were as follows:
 | 2017              | 35796200           | 1.994458388  |
 | 2018              | 107873900          | -0.626018859 |
 
-The results are correct but not very pretty, well they are presented here better than they are in the Excel spreadsheet - but Steve would probably like the spreadsheet to be improved (that could be future work for me).  In addition to improving the appearance, Steve wanted to see all the tickers in each ticker in a number of green stocks, so another VBScript was created AllStocksAnalysis.  This new version of the VBScript was somewhat inefficent and clearly anoying because it refreshs the All Stocks Analysis worksheet as in loops though every ticker causing the screen to flicker like a strobe light.  You can see this in the code below, where j is the index for rows and i is the ticker index.
+The results are correct but not very pretty, well they are presented here better than they are in the Excel spreadsheet - but Steve would probably like the spreadsheet to be improved (that could be future work for me).  In addition to improving the appearance, Steve wanted to see all the tickers in each ticker in a number of green stocks, so another VBScript was created AllStocksAnalysis.  This new version of the VBScript was somewhat inefficient and clearly annoying because it refreshes the All Stocks Analysis worksheet as in loops though every ticker causing the screen to flicker like a strobe light.  You can see this in the code below, where j is the index for rows and i is the ticker index.
 
        Next j
        '6) Output data for current ticker
@@ -56,7 +54,7 @@ The refactor code, in VBScript AllStocksAnalysisRefactored, resolves this ineffi
     Next i  
 
    Creating an array for the volumes and prices was done so that this refactoring could be achieved, the results were far superior for Steve.  In further researching the possible causes of slow macro enabled workbooks I came across a fabulous resource that I added to another VBScript called EvenFaster.
-   
+
    I noticed that this Original code was constantly writing to the sheet so I found this code at:  
    https://www.dummies.com/software/microsoft-office/excel/10-ways-to-speed-up-your-macros/
 
@@ -66,20 +64,18 @@ The refactor code, in VBScript AllStocksAnalysisRefactored, resolves this ineffi
 
     Application.Calculation = xlCalculationManual
     Application.ScreenUpdating = False
-
+    
     At the end of the subroutine you need to turn them on to complete the spreadsheet work.  Here is the code for that:
-
+    
     Application.Calculation = xlCalculationAutomatic
     Application.ScreenUpdating = True
-
-    It makes an amazing difference, both in time and visual program performance.
     
-## 2 Analysis and Observations
-<!-- Results: Using images and examples of your code, compare the stock performance between 2017 and 2018, as well as the execution times of the original script and the refactored script. -->
+    It makes an amazing difference, both in time and visual program performance.
 
+## 2 Analysis and Observations
 ### 2.1 Analysis of 2017 Stocks
-  
-Looking at table 2.1 below you can see that this was a banner year for green energy.  Here are some take aways that Steve had for consideration of the DAQO New Engergy Corp (DQ) stock in comparison to other stock in the same market:
+
+Looking at table 2.1 below you can see that this was a banner year for green energy.  Here are some observations that I had for Steve's consideration of the DAQO New Energy Corp (DQ) stock in comparison to other stock in the same market:
 
 - DQ was the highest preforming stock in 2017, significantly out performing the average stock  
 - DQ was the least traded stock of comparable green energy stocks
@@ -88,9 +84,9 @@ Looking at table 2.1 below you can see that this was a banner year for green ene
 ![This is a sheenshot form stock the 2017 performance from VBA_Challenge.xlsm spreadsheet](Resources/StockAnalysis2017.png "Table 2.1 - 2017 Stock Analysis")  
 **Table 2.1 - 2017 Stock Analysis"**
 
-#### VBScript Perfomance on 2017 Ticker Data
+#### VBScript Performance on 2017 Ticker Data
 
-The refactoring of the original VBScipt produced much better execusion times as can be seen in the MsgBox screen shots below.  As fast as the refactoring was in you can see that it can still be improved.  Notice the progresive improvement in Figures 2.1.1, 2.1.2 and 2.1.3 for the 2017 data set.
+The refactoring of the original VBScipt produced much better execution times as can be seen in the MsgBox screen shots below.  As fast as the refactoring was in you can see that it can still be improved.  Notice the progressive improvement in Figures 2.1.1, 2.1.2 and 2.1.3 for the 2017 data set.
 
 ![This is a MsgBox from the AllStocksAnalysis VBScript Module my VBA_Challenge.xlsm spreadsheet](Resources/VBA_Challenge_2017_before.png "Figure 2.1.1 - 2017 Stock Analysis VBScript Performance Before Refactoring")  
 **Figure 2.1.1 - 2017 Stock Analysis VBScript Performance Before Refactoring**
@@ -103,7 +99,7 @@ The refactoring of the original VBScipt produced much better execusion times as 
 
 ### 2.2 Analysis of 2018 Stocks
 
-Looking at table 2.2 below you can see that, in stark contrast to 2017, 2018 was a very poor year for green energy.  Here are some take aways that Steve had for consideration of the DAQO New Engergy Corp (DQ) stock in comparison to other stock in the same market:
+Looking at table 2.2 below you can see that, in stark contrast to 2017, 2018 was a very poor year for green energy.  Here are some observations I had for Steve's considerations of the DAQO New Energy Corp (DQ) stock in comparison to other stock in the same market:
 
 - In 2018 DQ was now the lowest preforming stock of all the green energy stock analyzed  
 - DQ trade volume was up but still well below the average trading volume for this sector
@@ -113,7 +109,7 @@ Looking at table 2.2 below you can see that, in stark contrast to 2017, 2018 was
 ![This is a sheenshot form stock the 2018 performance from VBA_Challenge.xlsm spreadsheet](Resources/StockAnalysis2018.png "Table 2.2 - 2018 Stock Analysis")  
 **Table 2.2 - 2018 Stock Analysis"**
 
-#### VBScript Perfomance on 2018 Ticker Data
+#### VBScript Performance on 2018 Ticker Data
 
 The refactoring of the original VBScipt produced much better execusion times as can be seen in the MsgBox screen shots below.  As fast as the refactoring was in you can see that it can still be improved.  Notice the progresive improvement in Figures 3.1.1, 3.1.2 and 3.1.3 for the 2018 data set.
 
@@ -170,14 +166,12 @@ I didn't like the the stock data had to be sort before in could be analyze, so f
                     
                 End If
                 End If
-    
-    
+
+
+​    
         Next i
 
-<!-- Summary: In a summary statement, address the following questions.
-What are the advantages or disadvantages of refactoring code?
-How do these pros and cons apply to refactoring the original VBA script? --> 
-As mentioned at the introduction to this report there were a few data related issues that were effectively resolved though my work.  More importantly, there is a need for better, more complete, information - that is the quest of all consultants analyzing data.  What has been done for Steve throughout this project has been of value for him to do a lot of future anaylsis.  The refactoring of code would really not been of value if this was a one time analysis for Steve and this limited set of tickers was all that were to be review.  The refactoring effort is clearly of vale as the number of data items increments and the number of time the analysis will be run.  From my perspective as an programmer this exerisze was of great value as I learnt a lot of tricks that I will use in the future.  I did notice that the original code was not designed well to make use of arrays and instead used variables that forced writing the the spreadsheet on every interation of the tickers.
+As mentioned at the introduction to this report there were a few data related issues that were effectively resolved though my work.  More importantly, there is a need for better, more complete, information - that is the quest of all consultants analyzing data.  What has been done for Steve throughout this project has been of value for him to do a lot of future analysis.  The refactoring of code would really not been of value if this was a one time analysis for Steve and this limited set of tickers was all that were to be review.  The refactoring effort is clearly of vale as the number of data items increments and the number of time the analysis will be run.  From my perspective, as an programmer, this exercise was of great value as I learnt a lot of tricks that I will use in the future.  I did notice that the original code was not designed well to make use of arrays and instead used variables that forced writing the the spreadsheet on every iteration of the tickers.
 
 ## 3 Results Summary and Recommendations
 I have discussed a few observations above in the report, but the overall observations are as follows:
@@ -186,4 +180,4 @@ I have discussed a few observations above in the report, but the overall observa
 - Steve is also aware that we can modify the code to permit unstructure dataset
 - He also knows that if it exist we can easily add sheets for different years into the analysis including the ability to select tickers from a list to focus on multi-year analysis of promising investments
 
-I would recommend that Steve further engage my consulting services to determine if it would be feasible better investment opportunities exist in the green engergy sector they may also have an interest in..
+I would recommend that Steve further engage my consulting services to determine if it would be feasible better investment opportunities exist in the green engergy sector they may also have an interest in.
