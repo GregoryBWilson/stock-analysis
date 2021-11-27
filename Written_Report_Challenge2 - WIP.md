@@ -24,7 +24,15 @@ The analysis followed the general process looping through the rows of the stock 
                     
         Worksheets(DataYear(K)).Activate
   
-Steve wanted to see all the tickers in each year so another VBScript was created AllStocksAnalysis.  This version of the VBScript was somewhat inefficent and clearly anoying because it refreshs the All Stocks Analysis worksheet as in loops though every ticker causing the screen to flicker like a strobe light.  You can see this in the code below, where j is the index for rows and i is the ticker index.
+The results for steve were as follows:
+
+DAQO (Ticker: DQ)		
+		
+Year	Total Daily Volume	Return
+2017	35796200	1.994458388
+2018	107873900	-0.626018859
+
+The results are correct but not very pretty.  In addition to improving the appearance, Steve wanted to see all the tickers in each ticker in a number of green stocks, so another VBScript was created AllStocksAnalysis.  This new version of the VBScript was somewhat inefficent and clearly anoying because it refreshs the All Stocks Analysis worksheet as in loops though every ticker causing the screen to flicker like a strobe light.  You can see this in the code below, where j is the index for rows and i is the ticker index.
 
        Next j
        '6) Output data for current ticker
@@ -46,7 +54,7 @@ The refactor code, in VBScript AllStocksAnalysisRefactored, resolves this ineffi
         
     Next i  
 
-   In researching the possible causes of slow macro enabled workbooks I came across a fabulous resource that I added to another VBScript called EvenFaster.
+   Creating an array for the volumes and prices was done so that this refactoring could be achieved, the results were far superior for Steve.  In further researching the possible causes of slow macro enabled workbooks I came across a fabulous resource that I added to another VBScript called EvenFaster.
    
    I noticed that this Original code was constantly writing to the sheet so I found this code at:  
    https://www.dummies.com/software/microsoft-office/excel/10-ways-to-speed-up-your-macros/
@@ -63,16 +71,18 @@ The refactor code, in VBScript AllStocksAnalysisRefactored, resolves this ineffi
     Application.Calculation = xlCalculationAutomatic
     Application.ScreenUpdating = True
 
-    It makes an amzing difference, both in time and visual program performance.
+    It makes an amazing difference, both in time and visual program performance.
     
 ## 2 Analysis and Observations
 <!-- Results: Using images and examples of your code, compare the stock performance between 2017 and 2018, as well as the execution times of the original script and the refactored script. -->
 
 ### 2.1 Analysis of 2017 Stocks
   
-The analysis of the database included a significant number of projects in the theatre category and most of those were from the subcategory plays.  The campaign for the play Fever that was launched in June may have been slightly late.  In the graphs x.x and x.y below you can see that May appears to be the best time of year to have a successful campaign.  This is particularly true when you analyse the success and failure ratio - the decline from May to the end of the year is significant.  You will also notice that while the success rises from January to May it is not as steep of a rise and then you find that in May and June the largest numbers of campaigns are launched.  I would conclude the following:
-- When you launch a campaign too early in the year it is possible that investors may be inclined to hold off to see what other opportunities may present themselves
-- If you wait too late to launch, then you are likely to find that many investors have already committed their funds to another project  
+Looking at table 2.1 below you can see that this was a banner year for green energy.  Here are some take aways that Steve had for consideration of the DAQO New Engergy Corp (DQ) stock in comparison to other stock in the same market:
+
+- DQ was the highest preforming stock in 2017, significantly out performing the average stock  
+- DQ was the least traded stock of comparable green energy stocks
+- The highest trading stock SPWR had a postive return however it was one one of the poorest performing green stocks
 
 ![This is a sheenshot form stock the 2017 performance from VBA_Challenge.xlsm spreadsheet](Resources/StockAnalysis2017.png "Table 2.1 - 2017 Stock Analysis")  
 **Table 2.1 - 2017 Stock Analysis"**
@@ -90,9 +100,12 @@ The analysis of the database included a significant number of projects in the th
 
 ### 2.2 Analysis of 2018 Stocks
 
-The analysis of the database shows that Louise's campaign, at less than $3,000 was set at a very reasonable goal level.  The only goal level that performed better was at less than a $1,000.  However, if you consider that most ranges were $4,999 you could in fact say that Louise was in the highest success range.  You could also say that while the less than $1,000 range was the most successful at raising money, it was also somewhat of an outlier in that it was likely too small a goal to achieve anything of importance.  I would argue that Louise was well positioned in terms of goals to be successful.  There are very few campaigns with goals that exceed $25,000 and in fact it is unlikely that the results above this range are of any statistical significance based on the small sample size.  The conclusions that could be drawn are:
-- There is a clear trend that demonstrates that the larger the goal the less likely it is to get sufficient pledges
-- The other interesting observation is that there seems to be a significant financial threshold at the $5,000 goal level where investor's interest tends to wain
+Looking at table 2.2 below you can see that, in stark contrast to 2017, 2018 was a very poor year for green energy.  Here are some take aways that Steve had for consideration of the DAQO New Engergy Corp (DQ) stock in comparison to other stock in the same market:
+
+- In 2018 DQ was now the lowest preforming stock of all the green energy stock analyzed  
+- DQ trade volume was up but still well below the average trading volume for this sector
+- The highest trading stock in 2017 SPWR was still trading high but the volumes had dropped significantly and they were now showing negative returns  
+- Only two stocks, ENPH and RUN were showing poitive returns in a market of big lossers, their substaintial positive returns were quite stiking
 
 ![This is a sheenshot form stock the 2018 performance from VBA_Challenge.xlsm spreadsheet](Resources/StockAnalysis2018.png "Table 2.2 - 2018 Stock Analysis")  
 **Table 2.2 - 2018 Stock Analysis"**
