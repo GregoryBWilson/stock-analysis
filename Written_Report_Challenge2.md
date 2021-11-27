@@ -202,4 +202,4 @@ I have discussed a few observations above in the report, but the overall observa
 - Steve is also aware that we can modify the code to permit unstructure dataset
 - He also knows that if it exist we can easily add sheets for different years into the analysis including the ability to select tickers from a list to focus on multi-year analysis of promising investments
 
-I would recommend that Steve further engage my consulting services to determine if it would be feasible better investment opportunities exist in the green engergy sector they may also have an interest in.
+I would recommend that Steve further engage my consulting services to determine if, through the analysis of more information, better investment opportunities may exist in the green engergy or other sectors of interest to his parents.
