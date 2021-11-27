@@ -121,18 +121,20 @@ Looking at table 2.2 below you can see that, in stark contrast to 2017, 2018 was
 ![This is a MsgBox from the AllStocksEvenFaster VBScript Module my VBA_Challenge.xlsm spreadsheet](Resources/VBA_Challenge_2018-Even_Faster.png "Figure 3.1.3 - 2018 Stock Analysis VBScript Performance After Refactoring")  
 **Figure 3.1.3 - 2018 Stock Analysis VBScript Performance After Refactoring to an Even Faster**
 
-**What do we know?**  
-This is what we have determine based on the work that Louise has contracted us to do.
-- Louise's campaign to seek investment in June was a little late in the year just missing the May peek season.  However that is typically still in a fairly successful time of the year for investor funding
-- Louise's goal was reasonable in terms of what she was looking to raise as she was well below the $5,000 apparent psychological threshold
-- Unfortunately, Louise fell short of her goal
+### 2.3 Overview of Analysis
+#### What do we know?  
+There realling isn't much data to work with but here is what we know:  
+- What we do know is that the beginning of 2017 was a great time to invest in the green energy sector.  
+- We also know that the end of 2017 / the beginning of 2018 would have been a terrible time to make the same investment. 
 
-**How can we help?**  
-Not wanting to leave Louis without a more significant plan to improve her chances next time, I decide to have a look at the market in which she was competing.  Using a pivot table with countries as rows, I noticed that three countries were worth looking at for the theater/play category: Canada, Great Britain and the United States.  Tables 2.3.1 and 2.3.2 below yield some valuable information for Louis:
-- While the United States has by far the most campaigns the overall success rate is only 62%
-- In Great Britain the success rate is an impressive 77% overall with successes 3.4 times more likely than failures
-- If Louise feels the logistics of a launch in Great Britain are too difficult, she might consider Canada as an option due to the favourable investment environment and the relative proximity to the US
+#### What don't we know?
+Well, there is an awful lots things that we don't know.  In fact there are way more things that are unknown, but would be helpful if we knew them:
+- For one we don't know how long each of these companies have been trading.  
+- We also don't know when Steve's parents first made their investment - i.e. what was their original investment.
+- We don't know anything at all about the market in general, was the big decline in 2018 market wide or just in this green energy sector.  
 
+#### How can we help?  
+If Steve is willing to continue to pay for our service, we can offer Steve more assistence in answering some of these unknown questions.  Without knowing more than we currently know it would not be advisable to draw any truly meaningful recommendations for Steve that would help his parents.
 
 ## 3 Challenges and Difficulties Encountered
 
@@ -170,11 +172,13 @@ I didn't like the the stock data had to be sort before in could be analyze, so f
 <!-- Summary: In a summary statement, address the following questions.
 What are the advantages or disadvantages of refactoring code?
 How do these pros and cons apply to refactoring the original VBA script? --> 
-As mentioned at the introduction to this report there were a few data related issues that were effectively resolved though my work.  More importantly, there is a need for better, more complete, information - that is the quest of all consultants analyzing data.  For example, if it is true that projects who set a low goal are most successful at the beginning, are they also the most likely to fail in production - we don't know because the data is not available. We also know nothing about who is funding the campaign, it would be valuable to know which investors are open to what Louis has to offer. Most projects are funded at a very low level, unfortunately there are not enough data points to reasonably zoom in on the detail of that range to look for opportunities for Louise. 
+As mentioned at the introduction to this report there were a few data related issues that were effectively resolved though my work.  More importantly, there is a need for better, more complete, information - that is the quest of all consultants analyzing data.  What has been done for Steve throughout this project has been of value for him to do a lot of future anaylsis.  The refactoring of code would really not been of value if this was a one time analysis for Steve and this limited set of tickers was all that were to be review.  The refactoring effort is clearly of vale as the number of data items increments and the number of time the analysis will be run.  From my perspective as an programmer this exerisze was of great value as I learnt a lot of tricks that I will use in the future.  I did notice that the original code was not designed well to make use of arrays and instead used variables that forced writing the the spreadsheet on every interation of the tickers.
+
 ## 3 Results Summary and Recommendations
 I have discussed a few observations above in the report, but the overall observations are as follows:
-- Louise has a viable ask in terms of financial needs
-- Louise needs to improve her timing so that she hits investors at exactly the right time
-- Louise may wish to look at Great Britain or even Canada as more amenable markets for her play
+- Steve has a valuable tools to help him analysis multiple stock
+- Steve is now aware of the current limitations of his data set
+- Steve is also aware that we can modify the code to permit unstructure dataset
+- He also knows that if it exist we can easily add sheets for different years into the analysis including the ability to select tickers from a list to focus on multi-year analysis of promising investments
 
-I would recommend that Louise further engage my consulting services to determine if it would be feasible to launch in a geographic market other than the United States.
+I would recommend that Steve further engage my consulting services to determine if it would be feasible better investment opportunities exist in the green engergy sector they may also have an interest in..
