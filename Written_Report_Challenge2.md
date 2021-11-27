@@ -26,11 +26,12 @@ The analysis followed the general process looping through the rows of the stock 
   
 The results for steve were as follows:
 
-DAQO (Ticker: DQ)		
-		
-Year	Total Daily Volume	Return
-2017	35796200	1.994458388
-2018	107873900	-0.626018859
+| DAQO (Ticker: DQ) |                    |              |
+| ----------------- | ------------------ | ------------ |
+|                   |                    |              |
+| Year              | Total Daily Volume | Return       |
+| 2017              | 35796200           | 1.994458388  |
+| 2018              | 107873900          | -0.626018859 |
 
 The results are correct but not very pretty.  In addition to improving the appearance, Steve wanted to see all the tickers in each ticker in a number of green stocks, so another VBScript was created AllStocksAnalysis.  This new version of the VBScript was somewhat inefficent and clearly anoying because it refreshs the All Stocks Analysis worksheet as in loops though every ticker causing the screen to flicker like a strobe light.  You can see this in the code below, where j is the index for rows and i is the ticker index.
 
