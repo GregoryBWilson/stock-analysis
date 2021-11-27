@@ -33,7 +33,7 @@ The results for steve were as follows:
 | 2017              | 35796200           | 1.994458388  |
 | 2018              | 107873900          | -0.626018859 |
 
-The results are correct but not very pretty.  In addition to improving the appearance, Steve wanted to see all the tickers in each ticker in a number of green stocks, so another VBScript was created AllStocksAnalysis.  This new version of the VBScript was somewhat inefficent and clearly anoying because it refreshs the All Stocks Analysis worksheet as in loops though every ticker causing the screen to flicker like a strobe light.  You can see this in the code below, where j is the index for rows and i is the ticker index.
+The results are correct but not very pretty, well they are presented here better than they are in the Excel spreadsheet - but Steve would probably like the spreadsheet to be improved (that could be future work for me).  In addition to improving the appearance, Steve wanted to see all the tickers in each ticker in a number of green stocks, so another VBScript was created AllStocksAnalysis.  This new version of the VBScript was somewhat inefficent and clearly anoying because it refreshs the All Stocks Analysis worksheet as in loops though every ticker causing the screen to flicker like a strobe light.  You can see this in the code below, where j is the index for rows and i is the ticker index.
 
        Next j
        '6) Output data for current ticker
@@ -90,6 +90,8 @@ Looking at table 2.1 below you can see that this was a banner year for green ene
 
 #### VBScript Perfomance on 2017 Ticker Data
 
+The refactoring of the original VBScipt produced much better execusion times as can be seen in the MsgBox screen shots below.  As fast as the refactoring was in you can see that it can still be improved.  Notice the progresive improvement in Figures 2.1.1, 2.1.2 and 2.1.3 for the 2017 data set.
+
 ![This is a MsgBox from the AllStocksAnalysis VBScript Module my VBA_Challenge.xlsm spreadsheet](Resources/VBA_Challenge_2017_before.png "Figure 2.1.1 - 2017 Stock Analysis VBScript Performance Before Refactoring")  
 **Figure 2.1.1 - 2017 Stock Analysis VBScript Performance Before Refactoring**
 
@@ -112,6 +114,8 @@ Looking at table 2.2 below you can see that, in stark contrast to 2017, 2018 was
 **Table 2.2 - 2018 Stock Analysis"**
 
 #### VBScript Perfomance on 2018 Ticker Data
+
+The refactoring of the original VBScipt produced much better execusion times as can be seen in the MsgBox screen shots below.  As fast as the refactoring was in you can see that it can still be improved.  Notice the progresive improvement in Figures 3.1.1, 3.1.2 and 3.1.3 for the 2018 data set.
 
 ![This is a MsgBox from the AllStocksAnalysis VBScript Module my VBA_Challenge.xlsm spreadsheet](Resources/VBA_Challenge_2018_before.png "Figure 3.1.1 - 2018 Stock Analysis VBScript Performance Before Refactoring")  
 **Figure 3.1.1 - 2018 Stock Analysis VBScript Performance Before Refactoring**
