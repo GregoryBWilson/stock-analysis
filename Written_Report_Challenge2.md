@@ -139,6 +139,8 @@ If Steve is willing to continue to pay for our service, we can offer Steve more 
 
 ## 3 Challenges and Difficulties Encountered
 
+### Additional Refactoring Example
+
 I didn't like the the stock data had to be sort before in could be analyze, so for my own intereted I created this script the gives the same rsesults no matter how messed up the rows are.  I is pretty efficent too.  I didn't include this in the project, becuase I think we can up sell Steve on some more work for large data sets.
 
         'I SET THIS LOOP UP SO THAT YOU DON'T CARE WHAT ORDER THE DATA IS IN IT WILL STILL WORK
@@ -169,11 +171,31 @@ I didn't like the the stock data had to be sort before in could be analyze, so f
 
 
 ​    
-        Next i
+​        Next i
+### Refactoring Pros & Cons
+As mentioned at the introduction to this report there were a few data related issues that were effectively resolved though my work.  More importantly, there is a need for better, more complete, information - that is the quest of all consultants analyzing data.  This section is a summary and discussion of the Pros and Cons of refactoring in general and specifically in regards to Steve's requirements.
 
-As mentioned at the introduction to this report there were a few data related issues that were effectively resolved though my work.  More importantly, there is a need for better, more complete, information - that is the quest of all consultants analyzing data.  What has been done for Steve throughout this project has been of value for him to do a lot of future analysis.  The refactoring of code would really not been of value if this was a one time analysis for Steve and this limited set of tickers was all that were to be review.  The refactoring effort is clearly of vale as the number of data items increments and the number of time the analysis will be run.  From my perspective, as an programmer, this exercise was of great value as I learnt a lot of tricks that I will use in the future.  I did notice that the original code was not designed well to make use of arrays and instead used variables that forced writing the the spreadsheet on every iteration of the tickers.
+#### Pros of Refactoring
+What has been done for Steve throughout this project has been of value because it facilitates his needs future analysis on larger data sets.  The refactoring of code would really not have been of value if this was a one time analysis for Steve and this limited set of tickers was all that were to be review.  In general terms, the refactoring of code is clearly of value as the number of data items  and/or the number of times the analysis will be run increases.  From my perspective, as an programmer, this exercise was of great value as I learnt a lot of tricks that I will use in the future.  I did notice that the original code was not designed well to make use of arrays and instead used variables that forced writing the the spreadsheet on every iteration of the tickers.  
 
-## 3 Results Summary and Recommendations
+Business cases for refactoring include:
+
+- Clients who are willing to pay to have the work performed
+- Business that will save time many times because the code is part of their internal operations 
+- Business that occasionally do analysis on very large sets of data - for example monthly runs to assist in strategic investment or other business decisions 
+
+#### Cons of Refactoring
+
+From a professional learning perspective refactoring of code is always of value, and is something that developer can do for each others code  - however as a businessman, there are clear situations where there are some definite cons.
+
+Business cases for not refactoring include:
+
+- If the application is a onetime innovative as the results have already been achieved - no need to spend more money, move on to a higher priority project  
+- The application is conceptually very complex and the benefit of refactoring in terms of time saved could never outweigh to programming effort to speed up the process
+- As you can see in the bullets above, in general it is always a business case as to where your money can be used most effectively
+
+
+## 4 Results Summary and Recommendations
 I have discussed a few observations above in the report, but the overall observations are as follows:
 - Steve has a valuable tools to help him analysis multiple stock
 - Steve is now aware of the current limitations of his data set
