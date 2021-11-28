@@ -4,15 +4,15 @@ The purpose of the repository “stock-analysis” is to store the files used in
 
 ## Files in the Stock Analysis Repository
 
-I have created a resource folder to hold the image files that will be in the Challenge report.
+I have created a resource folder to hold the image files that will be in the final report.
 
-- The Excel spreadsheet containing the required tab is labeled VBA_Challenges.xlsm
+- The Excel spreadsheet containing the required tabs is labeled VBA_Challenges.xlsm
 
 - There is another Excel Spreadsheet green_stocks.xlsx that was a remnant after renaming the .xlsm version of this file as part of the challenge
 
 - The imported original VBScript VBA_Challenge.vbs is also included here for reference sake
 
-- The final report can be found in the Markdown file Written_Report_Challenge2.md markdown file
+- The final report can be found in the markdown file Written_Report_Challenge2.md
 
 - This repository contains a resource folder "Resources" with the six figures and two tables that are referenced in the report
 
